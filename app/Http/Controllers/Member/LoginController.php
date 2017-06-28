@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function login()
     {
-        return view('member.login');
+        return view('back.member.login');
     }
 
     public function loggingin(Request $request)
@@ -37,7 +37,7 @@ class LoginController extends Controller
 
     public function lostPassword()
     {
-        return view('authentication.login');
+        return view('back.member.login');
     }
 
 

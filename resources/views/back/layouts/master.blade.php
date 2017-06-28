@@ -13,14 +13,17 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
-    <link type="text/css" href="/css/app.css" rel="stylesheet"/>../../../../public/
-    <link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/vendors/themify/css/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="/css/custom_css/metisMenu.css">
-    <link rel="stylesheet" type="text/css" href="/vendors/bootstrap-switch/css/bootstrap-switch.css">
-    <link rel="stylesheet" type="text/css" href="/css/custom.css">
-
+    <link type="text/css" href="{{ asset('/css/app.css') }}" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/vendors/themify/css/themify-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/custom_css/metisMenu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/vendors/bootstrap-switch/css/bootstrap-switch.css') }}">
     <!-- end of global css -->
+    <!-- page css -->
+    @yield('page_css')
+    <!-- end page css -->
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/custom.css') }}">
 </head>
 
 <body class="skin-default">
@@ -56,9 +59,12 @@
 <!-- /.right-side -->
 <!-- ./wrapper -->
 <!-- global js -->
-<script src="/js/all.js" type="text/javascript"></script>
+
+<script src="{{ asset('/js/all.js') }}" type="text/javascript"></script>
+@yield('page_script')
 <!-- end of global js -->
 <!-- page level js -->
+
 <!-- end of page level js -->
 
 </body>

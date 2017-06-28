@@ -196,7 +196,20 @@ return [
           *  LaravelCollective Html Service Provider
           */
         Collective\Html\HtmlServiceProvider::class,
+        /*
+         * Laravel Socialite service provider
+         */
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
+        /*
+         *  Eloquent slugger provider
+         */
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+
+        /*
+         *  Eloquent taggable provider
+         */
+        Cviebrock\EloquentTaggable\ServiceProvider::class,
     ],
 
     /*
@@ -268,6 +281,11 @@ return [
          */
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        /*
+         * Laravel socialite facade
+         */
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

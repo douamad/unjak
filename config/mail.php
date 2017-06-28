@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('MAIL_DRIVER', 'smtp'),
+    //'driver' => env('MAIL_DRIVER', 'smtp'),
 
     /*
     |--------------------------------------------------------------------------
@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    //'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    //'port' => env('MAIL_PORT', 587),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,10 +55,10 @@ return [
     |
     */
 
-    'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
-    ],
+//    'from' => [
+//        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+//        'name' => env('MAIL_FROM_NAME', 'Example'),
+//    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    //'encryption' => env('MAIL_ENCRYPTION', 'tls'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
-
-    'password' => env('MAIL_PASSWORD'),
+//    'username' => env('MAIL_USERNAME'),
+//
+//    'password' => env('MAIL_PASSWORD'),
 
     /*
     |--------------------------------------------------------------------------
@@ -99,12 +99,22 @@ return [
     |
     */
 
-    'markdown' => [
-        'theme' => 'default',
-
-        'paths' => [
-            resource_path('views/vendor/mail'),
-        ],
-    ],
-
+//    'markdown' => [
+//        'theme' => 'default',
+//
+//        'paths' => [
+//            resource_path('views/vendor/mail'),
+//        ],
+//    ],
+    "driver" => "smtp",
+    "host" => "smtp.mailtrap.io",
+    "port" => 2525,
+    "from" => array(
+        "address" => "from@example.com",
+        "name" => "Example"
+    ),
+    "username" => "d2b276aeba952d",
+    "password" => "0e0809117033c2",
+    //"sendmail" => "/usr/sbin/sendmail -bs",
+    "pretend" => false
 ];
